@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <form>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" [(ngModel)]="registro.nombre" name="nombre">
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo" [(ngModel)]="registro.correo" name="correo">
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su teléfono" [(ngModel)]="registro.telefono" name="telefono">
+      </div>
+      <div class="mb-3">
+        <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="fechaNacimiento" [(ngModel)]="registro.fechaNacimiento" name="fechaNacimiento">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Sexo</label>
+        <div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" id="sexoMasculino" value="masculino" [(ngModel)]="registro.sexo" name="sexo">
+            <label class="form-check-label" for="sexoMasculino">Masculino</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sexo" id="sexoFemenino" value="femenino" [(ngModel)]="registro.sexo" name="sexo">
+            <label class="form-check-label" for="sexoFemenino">Femenino</label>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="registrar()">Enviar</button>
+    </form>
+  </div>
+  
