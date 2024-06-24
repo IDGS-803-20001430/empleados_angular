@@ -20,5 +20,17 @@ export class FormularioComponent {
     this.registro = {} as IEmpleado
   }
 
+  public get validarFormulario(){
+    if (
+      this.registro.nombre &&
+      this.registro.correo &&
+      this.registro.telefono &&
+      this.registro.fechaNacimiento &&
+      this.registro.sexo
+    )return false;
+
+    return true;
+  }
+
 
 }
